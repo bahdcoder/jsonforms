@@ -142,9 +142,6 @@ const controlRenderer = defineComponent({
         if (specificLabel && specificLabel.trim() !== "") {
           return specificLabel;
         }
-        if (specificLabel === "") {
-          return "";
-        }
       }
 
       const groupLabel = this.control.label || "Item";
