@@ -21,13 +21,14 @@
       :class="styles.arrayList.itemWrapper"
     >
       <array-list-element
-        :move-up="moveUp(control.path, index)"
+        :move-up="moveUp && moveUp(control.path, index)"
         :move-up-enabled="control.enabled && index > 0"
-        :move-down="moveDown(control.path, index)"
+        :move-down="moveDown && moveDown(control.path, index)"
         :move-down-enabled="control.enabled && index < control.data.length - 1"
         :delete-enabled="control.enabled && !minItemsReached"
-        :delete="removeItems(control.path, [index])"
-        :label="childLabelForIndex(index)"
+        :delete="removeItems && removeItems(control.path, [index])"
+        :label="getItemLabel(index)"
+        :initially-expanded="getInitiallyExpanded(index)"
         :styles="styles"
       >
         <dispatch-renderer
@@ -128,6 +129,26 @@ const controlRenderer = defineComponent({
         this.control.path,
         createDefaultValue(this.control.schema, this.control.rootSchema)
       )();
+    },
+    getInitiallyExpanded(_index: number): boolean {
+      return true;
+    },
+    getItemLabel(index: number): string {
+      if (
+        this.childLabelForIndex &&
+        typeof this.childLabelForIndex === "function"
+      ) {
+        const specificLabel = this.childLabelForIndex(index);
+        if (specificLabel && specificLabel.trim() !== "") {
+          return specificLabel;
+        }
+        if (specificLabel === "") {
+          return "";
+        }
+      }
+
+      const groupLabel = this.control.label || "Item";
+      return `${groupLabel} ${index + 1}`;
     },
   },
 });

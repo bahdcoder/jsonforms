@@ -2,30 +2,32 @@
   <div :class="styles.arrayList.item">
     <div :class="toolbarClasses" @click="expandClicked">
       <div :class="styles.arrayList.itemLabel">{{ label }}</div>
-      <button
-        :disabled="!moveUpEnabled"
-        :class="styles.arrayList.itemMoveUp"
-        type="button"
-        @click="moveUpClicked"
-      >
-        ↑
-      </button>
-      <button
-        :disabled="!moveDownEnabled"
-        :class="styles.arrayList.itemMoveDown"
-        type="button"
-        @click="moveDownClicked"
-      >
-        ↓
-      </button>
-      <button
-        :disabled="!deleteEnabled"
-        :class="styles.arrayList.itemDelete"
-        type="button"
-        @click="deleteClicked"
-      >
-        🗙
-      </button>
+      <div class="button-group">
+        <button
+          :disabled="!moveUpEnabled"
+          :class="styles.arrayList.itemMoveUp"
+          type="button"
+          @click="moveUpClicked"
+        >
+          ↑
+        </button>
+        <button
+          :disabled="!moveDownEnabled"
+          :class="styles.arrayList.itemMoveDown"
+          type="button"
+          @click="moveDownClicked"
+        >
+          ↓
+        </button>
+        <button
+          :disabled="!deleteEnabled"
+          :class="styles.arrayList.itemDelete"
+          type="button"
+          @click="deleteClicked"
+        >
+          🗙
+        </button>
+      </div>
     </div>
     <div :class="contentClasses">
       <slot></slot>

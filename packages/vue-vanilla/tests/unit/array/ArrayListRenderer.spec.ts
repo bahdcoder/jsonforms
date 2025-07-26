@@ -140,7 +140,7 @@ describe('ArrayListRenderer.vue', () => {
     const wrapper = mountJsonForms([{}], schemaWithNameAndRate, uischema);
     const labels = wrapper.findAll('.array-list-item-label');
     const labelText = labels[0].text();
-    expect(labelText).to.equal('');
+    expect(labelText).to.equal('Item 1');
   });
 
   it('compute default label with number', async () => {
@@ -162,6 +162,6 @@ describe('ArrayListRenderer.vue', () => {
     );
     const labels = wrapper.findAll('.array-list-item-label');
     const labelText = labels[0].text();
-    expect(labelText).to.equal('');
+    expect(labelText).to.equal('Item 1');
   });
 });
