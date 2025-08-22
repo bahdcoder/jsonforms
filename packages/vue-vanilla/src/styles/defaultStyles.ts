@@ -13,6 +13,13 @@ export const defaultStyles: Styles = {
     option: 'option',
     asterisk: 'asterisk',
     required: 'required',
+    radio: {
+      root: 'radio-group',
+      legend: 'radio-group-legend',
+      option: 'radio-option',
+      input: 'radio-input',
+      label: 'radio-label',
+    },
   },
   verticalLayout: {
     root: 'vertical-layout',

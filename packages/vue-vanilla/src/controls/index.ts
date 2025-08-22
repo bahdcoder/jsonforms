@@ -5,6 +5,8 @@ export { default as NumberControlRenderer } from './NumberControlRenderer.vue';
 export { default as IntegerControlRenderer } from './IntegerControlRenderer.vue';
 export { default as EnumControlRenderer } from './EnumControlRenderer.vue';
 export { default as oneOfEnumControlRenderer } from './EnumOneOfControlRenderer.vue';
+export { default as RadioGroupControlRenderer } from './RadioGroupControlRenderer.vue';
+export { default as OneOfRadioGroupControlRenderer } from './OneOfRadioGroupControlRenderer.vue';
 export { default as DateControlRenderer } from './DateControlRenderer.vue';
 export { default as DateTimeControlRenderer } from './DateTimeControlRenderer.vue';
 export { default as TimeControlRenderer } from './TimeControlRenderer.vue';
@@ -16,6 +18,8 @@ import { entry as numberControlRendererEntry } from './NumberControlRenderer.vue
 import { entry as integerControlRendererEntry } from './IntegerControlRenderer.vue';
 import { entry as enumControlRendererEntry } from './EnumControlRenderer.vue';
 import { entry as oneOfEnumControlRendererEntry } from './EnumOneOfControlRenderer.vue';
+import { entry as radioGroupControlRendererEntry } from './RadioGroupControlRenderer.vue';
+import { entry as oneOfRadioGroupControlRendererEntry } from './OneOfRadioGroupControlRenderer.vue';
 import { entry as dateControlRendererEntry } from './DateControlRenderer.vue';
 import { entry as dateTimeControlRendererEntry } from './DateTimeControlRenderer.vue';
 import { entry as timeControlRendererEntry } from './TimeControlRenderer.vue';
@@ -28,6 +32,8 @@ export const controlRenderers = [
   integerControlRendererEntry,
   enumControlRendererEntry,
   oneOfEnumControlRendererEntry,
+  radioGroupControlRendererEntry,
+  oneOfRadioGroupControlRendererEntry,
   dateControlRendererEntry,
   dateTimeControlRendererEntry,
   timeControlRendererEntry,

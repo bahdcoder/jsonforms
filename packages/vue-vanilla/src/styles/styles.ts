@@ -28,6 +28,13 @@ export interface Styles {
     option?: string;
     asterisk?: string;
     required?: string;
+    radio?: {
+      root?: string;
+      legend?: string;
+      option?: string;
+      input?: string;
+      label?: string;
+    };
   };
   dialog: {
     root?: string;
