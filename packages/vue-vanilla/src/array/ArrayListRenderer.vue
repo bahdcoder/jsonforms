@@ -9,7 +9,7 @@
         "
         @click="addButtonClick"
       >
-        +
+        Add +
       </button>
       <label :class="styles.arrayList.label">
         {{ control.label }}
