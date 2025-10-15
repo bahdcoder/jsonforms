@@ -6,7 +6,7 @@
       :class="styles.control.input"
       :value="checkElement.value"
       :checked="dataHasEnum(checkElement.value)"
-      :readonly="!control.enabled"
+      :disabled="!control.enabled"
       :placeholder="appliedOptions?.placeholder"
       @change="(event) => toggle(checkElement.value, event.target.checked)"
     />
