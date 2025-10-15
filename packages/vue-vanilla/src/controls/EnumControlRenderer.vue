@@ -9,7 +9,7 @@
       :id="control.id + '-input'"
       :class="styles.control.select"
       :value="control.data"
-      :disabled="!control.enabled"
+      :readonly="!control.enabled"
       :autofocus="appliedOptions.focus"
       @change="onChange"
       @focus="isFocused = true"

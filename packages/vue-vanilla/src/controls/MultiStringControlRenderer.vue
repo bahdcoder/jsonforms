@@ -9,7 +9,7 @@
       :id="control.id + '-input'"
       :class="styles.control.textarea"
       :value="control.data"
-      :disabled="!control.enabled"
+      :readonly="!control.enabled"
       :autofocus="appliedOptions.focus"
       :placeholder="appliedOptions.placeholder"
       @change="onChange"

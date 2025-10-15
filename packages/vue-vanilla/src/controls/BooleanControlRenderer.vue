@@ -10,7 +10,7 @@
       type="checkbox"
       :class="styles.control.input"
       :checked="!!control.data"
-      :disabled="!control.enabled"
+      :readonly="!control.enabled"
       :autofocus="appliedOptions.focus"
       :placeholder="appliedOptions.placeholder"
       @change="onChange"

@@ -21,7 +21,7 @@
           :class="styles.control.radio?.input"
           :value="optionElement.value"
           :checked="control.data === optionElement.value"
-          :disabled="!control.enabled"
+          :readonly="!control.enabled"
           :autofocus="appliedOptions.focus && optionElement.value === control.options[0]?.value"
           @change="onChange"
           @focus="isFocused = true"

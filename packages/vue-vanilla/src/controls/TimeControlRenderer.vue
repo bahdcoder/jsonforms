@@ -10,7 +10,7 @@
       type="time"
       :class="styles.control.input"
       :value="control.data"
-      :disabled="!control.enabled"
+      :readonly="!control.enabled"
       :autofocus="appliedOptions.focus"
       :placeholder="appliedOptions.placeholder"
       :step="typeof appliedOptions.step === 'number' ? appliedOptions.step : 0"

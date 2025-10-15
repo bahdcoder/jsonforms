@@ -11,7 +11,7 @@
       :step="step"
       :class="styles.control.input"
       :value="control.data"
-      :disabled="!control.enabled"
+      :readonly="!control.enabled"
       :autofocus="appliedOptions.focus"
       :placeholder="appliedOptions.placeholder"
       @change="onChange"

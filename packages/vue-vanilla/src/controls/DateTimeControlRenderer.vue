@@ -10,7 +10,7 @@
       type="datetime-local"
       :class="styles.control.input"
       :value="dataTime"
-      :disabled="!control.enabled"
+      :readonly="!control.enabled"
       :autofocus="appliedOptions.focus"
       :placeholder="appliedOptions.placeholder"
       @change="onChange"
